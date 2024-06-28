@@ -1,0 +1,45 @@
+# Define a function for each operation
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+
+def mul(x, y):
+    return x * y
+
+def div(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero!")
+    return x / y
+
+# Main program
+print("Welcome to the basic calculator!")
+
+# Get the two numbers from the user
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# Get the operation from the user
+print("Choose an operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+operation = int(input("Enter the operation (1-4): "))
+
+# Perform the selected operation
+if operation == 1:
+    result = add(num1, num2)
+elif operation == 2:
+    result = sub(num1, num2)
+elif operation == 3:
+    result = mul(num1, num2)
+elif operation == 4:
+    result = div(num1, num2)
+else:
+    print("Invalid operation!")
+    exit()
+
+# Display the result
+print("Result:", result)
